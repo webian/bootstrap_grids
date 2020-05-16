@@ -21,9 +21,7 @@ class FlexFormController {
      * @return array
      */
     public function getTwoColumnOptions($config) {
-        // default for 2 columns
-        $defaultOption = array('50% (col-md-6)', 'col-md-6');
-        return \Laxap\BootstrapGrids\Controller\FlexFormController::getColumnOptions($config, $defaultOption);
+        return \Laxap\BootstrapGrids\Controller\FlexFormController::getColumnOptions($config);
     }
 
     /**
@@ -31,9 +29,7 @@ class FlexFormController {
      * @return array
      */
     public function getThreeColumnOptions($config) {
-        // default for 3 columns
-        $defaultOption = array('33% (col-md-4)', 'col-md-4');
-        return \Laxap\BootstrapGrids\Controller\FlexFormController::getColumnOptions($config, $defaultOption);
+        return \Laxap\BootstrapGrids\Controller\FlexFormController::getColumnOptions($config);
     }
 
     /**
@@ -41,128 +37,35 @@ class FlexFormController {
      * @return array
      */
     public function getFourColumnOptions($config) {
-        // default for 4 columns
-        $defaultOption = array('25% (col-md-3)', 'col-md-3');
-        return \Laxap\BootstrapGrids\Controller\FlexFormController::getColumnOptions($config, $defaultOption);
+        return \Laxap\BootstrapGrids\Controller\FlexFormController::getColumnOptions($config);
     }
 
     /**
      * @param array $config
-     * @param array $defaultOption
      * @return array
      */
-    public static function getColumnOptions($config, $defaultOption) {
-        // mdCol, smCol, xsCol or lgCol
-        $fieldName = $config['field'];
-        $columnType = substr($fieldName, 0, -1);
+    public static function getColumnOptions($config) {
+        // mdCol, msCol, smCol, xsCol or lgCol
+        $columnType = substr($config['field'], 0, 2);
 
-        $optionList = array();
-        switch ( $columnType ) {
-            // medium device with
-            case 'mdCol':
-                // new grids: flexform not yet saved => add default setting as first option
-                if ( isset($config['flexParentDatabaseRow']['pi_flexform']['data']) && count($config['flexParentDatabaseRow']['pi_flexform']['data']) == 0 ) {
-                    $optionListStart = array($defaultOption,
-                                             array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.notset', ' '));
-                } else {
-                    $optionListStart = array(array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.notset', ' '),
-                                             $defaultOption);
-                }
+        $optionList = [
+                ["LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.notset", "col-$columnType-0"],
+                ["1 col (8%)", "col-$columnType-1"],
+                ["2 col (17%)", "col-$columnType-2"],
+                ["3 col (25%)", "col-$columnType-3"],
+                ["4 col (33%)", "col-$columnType-4"],
+                ["5 col (42%)", "col-$columnType-5"],
+                ["6 col (50%)", "col-$columnType-6"],
+                ["7 col (58%)", "col-$columnType-7"],
+                ["8 col (66%)", "col-$columnType-8"],
+                ["9 col (75%)", "col-$columnType-9"],
+                ["10 col (83%)", "col-$columnType-10"],
+                ["11 col (92%)", "col-$columnType-11"],
+                ["12 col (100%)", "col-$columnType-12"],
+                ["LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.hidden", "hidden-$columnType"],
+                ["LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.visible", "visible-$columnType"]
+        ];
 
-                switch ( $defaultOption[1] )  {
-                    case 'col-md-6':
-                        $optionListStart =  array_merge($optionListStart, array(array('25% (col-md-3)', 'col-md-3'),
-                                                                                array('33% (col-md-4)', 'col-md-4')));
-                        break;
-                    case 'col-md-4':
-                        $optionListStart =  array_merge($optionListStart, array(array('25% (col-md-3)', 'col-md-3'),
-                                                                                array('50% (col-md-6)', 'col-md-6')));
-                        break;
-                    case 'col-md-3':
-                        $optionListStart =  array_merge($optionListStart, array(array('33% (col-md-4)', 'col-md-4'),
-                                                                                array('50% (col-md-6)', 'col-md-6')));
-                        break;
-                }
-
-                $optionList = array_merge($optionListStart, array(array('66% (col-md-8)', 'col-md-8'),
-                                                                  array('75% (col-md-9)', 'col-md-9'),
-                                                                  array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreWidth', '--div--'),
-                                                                  array('8.3% (col-md-1)', 'col-md-1'),
-                                                                  array('16.7%  (col-md-2)', 'col-md-2'),
-                                                                  array('41.7% (col-md-5)', 'col-md-5'),
-                                                                  array('58.3% (col-md-7)', 'col-md-7'),
-                                                                  array('83.3% (col-md-10)', 'col-md-10'),
-                                                                  array('91.7% (col-md-11)', 'col-md-11'),
-                                                                  array('100% (col-md-12)', 'col-md-12'),
-                                                                  array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreOptions', '--div--'),
-                                                                  array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.hidden', 'hidden-md'),
-                                                                  array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.visible', 'visible-md')));
-                break;
-
-            // small device with
-            case 'smCol':
-                $optionList = array(array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.notset', ' '),
-                                    array('25% (col-sm-3)', 'col-sm-3'),
-                                    array('33% (col-sm-4)', 'col-sm-4'),
-                                    array('50% (col-sm-6)', 'col-sm-6'),
-                                    array('66% (col-sm-8)', 'col-sm-8'),
-                                    array('75% (col-sm-9)', 'col-sm-9'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreWidth', '--div--'),
-                                    array('8.3% (col-sm-1)', 'col-sm-1'),
-                                    array('16.7%  (col-sm-2)', 'col-sm-2'),
-                                    array('41.7% (col-sm-5)', 'col-sm-5'),
-                                    array('58.3% (col-sm-7)', 'col-sm-7'),
-                                    array('83.3% (col-sm-10)', 'col-sm-10'),
-                                    array('91.7% (col-sm-11)', 'col-sm-11'),
-                                    array('100% (col-sm-12)', 'col-sm-12'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreOptions', '--div--'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.hidden', 'hidden-sm'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.visible', 'visible-sm'));
-                break;
-
-
-            // extra small
-            case 'xsCol':
-                $optionList = array(array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.notset', ' '),
-                                    array('25% (col-xs-3)', 'col-xs-3'),
-                                    array('33% (col-xs-4)', 'col-xs-4'),
-                                    array('50% (col-xs-6)', 'col-xs-6'),
-                                    array('66% (col-xs-8)', 'col-xs-8'),
-                                    array('75% (col-xs-9)', 'col-xs-9'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreWidth', '--div--'),
-                                    array('8.3% (col-xs-1)', 'col-xs-1'),
-                                    array('16.7%  (col-xs-2)', 'col-xs-2'),
-                                    array('41.7% (col-xs-5)', 'col-xs-5'),
-                                    array('58.3% (col-xs-7)', 'col-xs-7'),
-                                    array('83.3% (col-xs-10)', 'col-xs-10'),
-                                    array('91.7% (col-xs-11)', 'col-xs-11'),
-                                    array('100% (col-xs-12)', 'col-xs-12'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreOptions', '--div--'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.hidden', 'hidden-xs'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.visible', 'visible-xs'));
-                break;
-
-            // extra large
-            case 'lgCol':
-                $optionList = array(array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.notset', ' '),
-                                    array('25% (col-lg-3)', 'col-lg-3'),
-                                    array('33% (col-lg-4)', 'col-lg-4'),
-                                    array('50% (col-lg-6)', 'col-lg-6'),
-                                    array('66% (col-lg-8)', 'col-lg-8'),
-                                    array('75% (col-lg-9)', 'col-lg-9'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreWidth', '--div--'),
-                                    array('8.3% (col-lg-1)', 'col-lg-1'),
-                                    array('16.7%  (col-lg-2)', 'col-lg-2'),
-                                    array('41.7% (col-lg-5)', 'col-lg-5'),
-                                    array('58.3% (col-lg-7)', 'col-lg-7'),
-                                    array('83.3% (col-lg-10)', 'col-lg-10'),
-                                    array('91.7% (col-lg-11)', 'col-lg-11'),
-                                    array('100% (col-lg-12)', 'col-lg-12'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.moreOptions', '--div--'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.hidden', 'hidden-lg'),
-                                    array('LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.visible', 'visible-lg'));
-                break;
-        }
         $config['items'] = array_merge($config['items'], $optionList);
         return $config;
     }

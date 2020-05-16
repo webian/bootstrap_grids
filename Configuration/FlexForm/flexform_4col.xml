@@ -4,6 +4,164 @@
         <langDisable>1</langDisable>
     </meta>
     <sheets>
+        <extraSmallDevices>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.sheet.extraSmallDevices</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <xsCol1 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-xs-6</default>
+                            </config>
+                        </TCEforms>
+                    </xsCol1>
+                    <xsCol2 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-xs-6</default>
+                            </config>
+                        </TCEforms>
+                    </xsCol2>
+                    <xsCol3 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-xs-6</default>
+                            </config>
+                        </TCEforms>
+                    </xsCol3>
+                    <xsCol4 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col4</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-xs-6</default>
+                            </config>
+                        </TCEforms>
+                    </xsCol4>
+                </el>
+            </ROOT>
+        </extraSmallDevices>
+        <smallMediumDevices>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.sheet.smallMediumDevices</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <msCol1 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getThreeColumnOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </msCol1>
+                    <msCol2 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getThreeColumnOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </msCol2>
+                    <msCol3 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getThreeColumnOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </msCol3>
+                    <msCol4 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col4</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                            </config>
+                        </TCEforms>
+                    </msCol4>
+                </el>
+            </ROOT>
+        </smallMediumDevices>
+        <smallDevices>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.sheet.smallDevices</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <smCol1 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-sm-3</default>
+                            </config>
+                        </TCEforms>
+                    </smCol1>
+                    <smCol2 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-sm-3</default>
+                            </config>
+                        </TCEforms>
+                    </smCol2>
+                    <smCol3 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-sm-3</default>
+                            </config>
+                        </TCEforms>
+                    </smCol3>
+                    <smCol4 type="array">
+                        <TCEforms type="array">
+                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col4</label>
+                            <config type="array">
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
+                                <default>col-sm-3</default>
+                            </config>
+                        </TCEforms>
+                    </smCol4>
+                </el>
+            </ROOT>
+        </smallDevices>
         <sDEF>
             <ROOT type="array">
                 <TCEforms>
@@ -54,106 +212,6 @@
                 </el>
             </ROOT>
         </sDEF>
-        <smallDevices>
-            <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.sheet.smallDevices</sheetTitle>
-                </TCEforms>
-                <type>array</type>
-                <el type="array">
-                    <smCol1 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </smCol1>
-                    <smCol2 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </smCol2>
-                    <smCol3 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </smCol3>
-                    <smCol4 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col4</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </smCol4>
-                </el>
-            </ROOT>
-        </smallDevices>
-        <extraSmallDevices>
-            <ROOT type="array">
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.sheet.extraSmallDevices</sheetTitle>
-                </TCEforms>
-                <type>array</type>
-                <el type="array">
-                    <xsCol1 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </xsCol1>
-                    <xsCol2 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </xsCol2>
-                    <xsCol3 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </xsCol3>
-                    <xsCol4 type="array">
-                        <TCEforms type="array">
-                            <label>LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col4</label>
-                            <config type="array">
-                                <type>select</type>
-                                <renderType>selectSingle</renderType>
-                                <itemsProcFunc>Laxap\BootstrapGrids\Controller\FlexFormController->getFourColumnOptions</itemsProcFunc>
-                            </config>
-                        </TCEforms>
-                    </xsCol4>
-                </el>
-            </ROOT>
-        </extraSmallDevices>
         <largeDevices>
             <ROOT type="array">
                 <TCEforms>

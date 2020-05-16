@@ -25,11 +25,11 @@ tx_gridelements {
                 rows.1 {
                     columns {
                         1 {
-                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.leftColumn
+                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1
                             colPos = 101
                         }
                         2 {
-                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.rightColumn
+                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2
                             colPos = 102
                         }
                     }
@@ -54,15 +54,15 @@ tx_gridelements {
                 rows.1 {
                     columns {
                         1 {
-                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.leftColumn
+                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1
                             colPos = 101
                         }
                         2 {
-                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.centerColumn
+                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2
                             colPos = 102
                         }
                         3 {
-                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.rightColumn
+                            name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3
                             colPos = 103
                         }
                     }
@@ -82,19 +82,19 @@ tx_gridelements {
                 rowCount = 1
                 rows.1.columns {
                     1 {
-                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.leftColumn
+                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col1
                         colPos = 101
                     }
                     2 {
-                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.column2
+                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col2
                         colPos = 102
                     }
                     3 {
-                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.column3
+                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col3
                         colPos = 103
                     }
                     4 {
-                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:celayout.rightColumn
+                        name = LLL:EXT:bootstrap_grids/Resources/Private/Language/locallang_db.xlf:grid.label.col4
                         colPos = 104
                     }
                 }
@@ -222,5 +222,11 @@ tx_gridelements {
             }
             flexformDS = FILE:EXT:bootstrap_grids/Configuration/FlexForm/flexform_slider.xml
         }
+
+        tabsSimple >
+        tabs4 >
+        tabs6 >
+        accordion >
+        slider >
     }
 }
