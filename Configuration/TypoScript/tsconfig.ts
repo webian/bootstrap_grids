@@ -205,5 +205,10 @@ tx_gridelements {
             }
             flexformDS = FILE:EXT:bootstrap_grids/Configuration/FlexForm/flexform_accordion.xml
         }
+
+        tabsSimple >
+        tabs4 >
+        tabs6 >
+        accordion >
     }
 }

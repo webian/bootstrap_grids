@@ -4,19 +4,19 @@
         <header/>
         <body>
             <trans-unit id="2cols.title" xml:space="preserve">
-				<source>2 columns</source>
+				<source>2 cells |</source>
 			</trans-unit>
             <trans-unit id="2cols.description" xml:space="preserve">
 				<source>Inserts a 2-columns grid for content. The width of each column may be set for different screen sizes.</source>
 			</trans-unit>
             <trans-unit id="3cols.title" xml:space="preserve">
-				<source>3 columns</source>
+				<source>3 cells |</source>
 			</trans-unit>
             <trans-unit id="3cols.description" xml:space="preserve">
 				<source>Inserts a 3-columns grid for content.</source>
 			</trans-unit>
             <trans-unit id="4cols.title" xml:space="preserve">
-				<source>4 columns</source>
+				<source>4 cells |</source>
 			</trans-unit>
             <trans-unit id="4cols.description" xml:space="preserve">
 				<source>Inserts a 4-columns grid for content.</source>
@@ -54,19 +54,19 @@
 			</trans-unit>
 
             <trans-unit id="celayout.leftColumn" xml:space="preserve">
-				<source>Left column</source>
+				<source>Cell 1</source>
 			</trans-unit>
             <trans-unit id="celayout.rightColumn" xml:space="preserve">
-				<source>Right column</source>
+				<source>Cell 2</source>
 			</trans-unit>
             <trans-unit id="celayout.centerColumn" xml:space="preserve">
-				<source>Center column</source>
+				<source>Cell 3</source>
 			</trans-unit>
             <trans-unit id="celayout.column2" xml:space="preserve">
-				<source>2nd column</source>
+				<source>2nd cell</source>
             </trans-unit>
             <trans-unit id="celayout.column3" xml:space="preserve">
-				<source>3rd column</source>
+				<source>3rd cell</source>
             </trans-unit>
             <trans-unit id="celayout.tabElements" xml:space="preserve">
 				<source>Tab elements</source>
@@ -97,16 +97,19 @@
             </trans-unit>
 
             <trans-unit id="grid.sheet.mediumDevices" xml:space="preserve">
-				<source>Desktop</source>
+				<source>Desktop 992+</source>
 			</trans-unit>
             <trans-unit id="grid.sheet.smallDevices" xml:space="preserve">
-				<source>Small devices</source>
+				<source>Desktop small / Tablet Oriz. 768+</source>
+			</trans-unit>
+            <trans-unit id="grid.sheet.smallMediumDevices" xml:space="preserve">
+				<source>Tablet Vert. / Smartphone Oriz. 480+</source>
 			</trans-unit>
             <trans-unit id="grid.sheet.extraSmallDevices" xml:space="preserve">
-				<source>Extra small</source>
+				<source>Smartphone Vert. 0+</source>
 			</trans-unit>
             <trans-unit id="grid.sheet.largeDevices" xml:space="preserve">
-				<source>Large</source>
+				<source>Desktop large 1200+</source>
 			</trans-unit>
             <trans-unit id="grid.sheet.extraLargeDevices" xml:space="preserve">
 				<source>Extra Large</source>
@@ -115,16 +118,16 @@
 				<source>Custom classes</source>
 			</trans-unit>
             <trans-unit id="grid.label.col1" xml:space="preserve">
-				<source>Column 1</source>
+				<source>Cell 1</source>
 			</trans-unit>
             <trans-unit id="grid.label.col2" xml:space="preserve">
-				<source>Column 2</source>
+				<source>Cell 2</source>
 			</trans-unit>
             <trans-unit id="grid.label.col3" xml:space="preserve">
-				<source>Column 3</source>
+				<source>Cell 3</source>
 			</trans-unit>
             <trans-unit id="grid.label.col4" xml:space="preserve">
-				<source>Column 4</source>
+				<source>Cell 4</source>
 			</trans-unit>
             <trans-unit id="grid.label.moreWidth" xml:space="preserve">
 				<source>More width</source>
