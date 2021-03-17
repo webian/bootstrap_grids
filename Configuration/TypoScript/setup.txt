@@ -56,7 +56,7 @@ lib.bootstrap_grids {
             101.wrap >
 
             // !ian: needed for drop zones of frontend_editing
-            101.stdWrap.editIcons = tt_content:header
+            //101.stdWrap.editIcons = tt_content:header
 
             102 < .101
             102.dataWrap.cObject {
